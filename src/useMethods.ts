@@ -8,7 +8,7 @@ type Action = {
 type CreateMethods<M, T> = (
   state: T
 ) => {
-  [P in keyof M]: (payload?: any) => T;
+  [P in keyof M]: (...payload?: any) => T;
 };
 
 type WrappedMethods<M> = {
